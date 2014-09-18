@@ -1,0 +1,6 @@
+{% extends "base.html" %}
+{% block news %}
+{% for post in object_list %}
+	<li><a href="/blog/{{post.id}}">{{post.title}}</a></li>
+{% endfor %}
+{% endblock %}
