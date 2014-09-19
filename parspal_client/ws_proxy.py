@@ -22,4 +22,5 @@ def verify_payment(merchant_id, password, price, refnum):
 if __name__ == '__main__':
     result = request_payment('1864704', 'TMewkyrp0', 11111, 'desc', 'soroosh', '09122502092',
                              'soroosh.sarabadani@gmail.com', '1', '/')
+    print result
     print result.PaymentPath
