@@ -4,5 +4,5 @@ from blog.models import Post
 from payment.views import StartView
 
 urlpatterns = patterns('',
-                       url(r'^(?i)start$', StartView.as_view()),
+                       url(r'^(?i)start$', StartView.as_view(),name='start'),
 )

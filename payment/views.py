@@ -9,7 +9,10 @@ class StartView(View):
     def get(self, requesr):
         pass
 
-    def post(self, request, name, email, amount):
+    def post(self, request):
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        amount = request.POST.get('amount')
         request_result = ws_proxy.request_payment(settings.MERCHANT_ID, settings.MERCHANT_PASSWORD, amount,
                                                   '1Hes Donation', name,
                                                   '09121231231', email, 1,
