@@ -63,6 +63,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ATOMIC_REQUESTS': True
     }
 }
 
@@ -90,4 +91,4 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
 # ##### Parspal Payment Info #########
 MERCHANT_ID = '1864704'
 MERCHANT_PASSWORD = 'TMewkyrp0'
-SERVER_BASE_ADDRESS = 'http:localhost:8000'
+SERVER_BASE_ADDRESS = 'http://localhost:8000'
