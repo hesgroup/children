@@ -1,0 +1,41 @@
+<!DOCTYPE Html>
+
+<html>
+	<head>
+		<title>post title</title>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="/static/asset/style/about.css">
+	</head>
+		<body>
+			<div id="container">
+			{% for post in queryset %}
+				<header>
+					<h1>چگونه سایت خودتون رو سئو کنید؟</h1>
+					<p>{{post.date}}</p>
+				</header>
+				<div id="main">
+				{% include "category.html" %}
+					
+					<div id="center">
+						<div id="content">
+							{{post.body}}
+						</div>
+						<div id="panel">
+							<p id="latestPosts">آخرین مطالب</p>
+							<aside>
+								<a href="#" class="latestPostTitle">همه چیز در مورد تجارت</a>
+								<p class="latestPostDate">۲۸ خرداد ۹۲</p>
+								<p class="latestPostDescription">شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیستری را برای طراحان رایانه ای و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها.</p>
+								<a href="#" class="readMore">بخونید</a>
+							</aside>
+						</div>
+					</div>
+				</div>
+			{% endfor %}
+				<footer>
+					<p id="copyRight">&copy ۱۳۹۳ - جنبش انگیزشی حس</p>
+					<a href="http://www.pyweb.ir" id="designer" class="active">طراحی و برنامه نویسی <span>پای وب</span></a>
+				</footer>
+			</div>
+		</body>
+</html>

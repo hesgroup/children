@@ -1,10 +1,8 @@
 from django.db import models
 
-class Post(models.Model):
+class About(models.Model):
 	title = models.CharField(max_length=150)
 	body = models.TextField()
-	date = models.DateTimeField()
-
+	date = models.DateTimeField(auto_now=True)
 	def __unicode__(self):
-	    return self.title
-    
+		return self.title

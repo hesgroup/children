@@ -39,6 +39,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'blog',
     'payment',
+    'about',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -89,6 +90,6 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
 
 
 # ##### Parspal Payment Info #########
-MERCHANT_ID = '1864704'
-MERCHANT_PASSWORD = 'TMewkyrp0'
+MERCHANT_ID = '1864702'
+MERCHANT_PASSWORD = 'qxXiHKvNw'
 SERVER_BASE_ADDRESS = 'http://localhost:8000'

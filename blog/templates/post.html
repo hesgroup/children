@@ -1,6 +1,46 @@
 
-{% block news %}
 
-	{{post.body|safe|linebreaks}}
 
-{% endblock %}
+<!DOCTYPE Html>
+
+<html>
+	<head>
+		<title>post title</title>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="/static/asset/style/post-style.css">
+	</head>
+		<body>
+			<div id="container">
+				<header>
+					<h1>{{post.title}}</h1>
+					<!-- <p>{{post.date}}</p> -->
+				</header>
+				<div id="main">
+					<div id="center">
+						<div id="content">
+							{{post.body|safe|linebreaks}}
+						</div>
+						<div id="panel">
+							<p id="latestPosts">آخرین مطالب</p>
+							<aside>
+								{% for i in recent_post %}
+								<div>
+								<a href="#" class="latestPostTitle">{{i.title}}</a>
+								<!-- <p class="latestPostDate">{{post.date}}</p> -->
+								<div>
+								<p class="latestPostDescription">{{i.des}}</p>
+								</div>
+								<a href="#" class="readMore">بخونید</a>
+								</div>
+								{% endfor %}
+							</aside>
+						</div>
+					</div>
+				</div>
+				<footer>
+					<p id="copyRight">&copy ۱۳۹۳ - جنبش انگیزشی حس</p>
+					<a href="http://www.pyweb.ir" id="designer" class="active">طراحی و برنامه نویسی: پای وب</a>
+				</footer>
+			</div>
+		</body>
+</html>
